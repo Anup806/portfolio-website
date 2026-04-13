@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         <div className="footer-divider" />
-        <p>© 2026 Anup Rai · Built with passion in Kathmandu, Nepal</p>
+        <p>@ Anup Rai, All rights reserved.</p>
       </div>
     </footer>
   );

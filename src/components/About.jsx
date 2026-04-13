@@ -1,3 +1,5 @@
+import Skills from "./Skills";
+
 function About() {
   return (
     <section className="section" id="about">
@@ -10,6 +12,8 @@ function About() {
           <p>
             Experience building real-time intelligent systems using probabilistic modeling and gesture-based interaction pipelines.
           </p>
+
+          <Skills />
         </div>
 
         <div className="about-photo-frame reveal">
