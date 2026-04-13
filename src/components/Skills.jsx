@@ -4,7 +4,10 @@ const categories = [
   {
     name: "Languages",
     tone: "purple",
-    skills: [{ label: "Python", value: 75 }],
+    skills: [
+      { label: "Python", value: 75 },
+      { label: "C/C++", value: 65 },
+    ],
   },
   {
     name: "ML & Data",
@@ -14,6 +17,8 @@ const categories = [
       { label: "Unsupervised / K-Means", value: 60 },
       { label: "Scikit-learn", value: 65 },
       { label: "BKT / DKT", value: 65 },
+      { label: "NumPy", value: 70 },
+      { label: "Pandas", value: 70 },
     ],
   },
   {

@@ -10,7 +10,7 @@ function Education() {
             <h3>B.E. Electronics &amp; Communication Engineering</h3>
             <p>Nepal Engineering College</p>
             <p>Pokhara University</p>
-            <span className="badge year-badge">Expected 2026</span>
+            <span className="badge year-badge">2021 – 2026</span>
           </article>
         </div>
       </div>

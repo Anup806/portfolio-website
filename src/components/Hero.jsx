@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const phrases = [
   "ML Engineer in the Making",
   "Computer Vision Developer",
-  "IEEE Best Paper Awardee",
+  "IEEE Best Paper Award",
   "ECE Graduate · AI Enthusiast",
 ];
 
@@ -51,11 +51,6 @@ function Hero() {
         <p className="typewriter">
           {text}
           <span className="cursor">|</span>
-        </p>
-
-        <p className="hero-summary">
-          Final-year Electronics &amp; Communication Engineering student specializing in applied machine learning and computer vision.
-          Experience building real-time intelligent systems using probabilistic modeling and gesture-based interaction pipelines.
         </p>
 
         <div className="hero-ctas">
