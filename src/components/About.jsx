@@ -7,10 +7,14 @@ function About() {
         <div className="about-text reveal">
           <h2 className="section-title">About Me</h2>
           <p>
-            Final-year Electronics &amp; Communication Engineering student specializing in applied machine learning and computer vision.
+            Final-year Electronics &amp; Communication Engineering student specializing in applied machine learning and data analytics.
           </p>
           <p>
-            Experience building real-time intelligent systems using probabilistic modeling and gesture-based interaction pipelines.
+            Experienced in building real-time intelligent systems using probabilistic modeling, gesture-based interaction, and
+            LLM-powered applications.
+          </p>
+          <p>
+            IEEE Best Paper Award recipient (AI &amp; ML Track, 2026)
           </p>
 
           <Skills />

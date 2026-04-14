@@ -56,46 +56,10 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const footprint = document.querySelector(".cursor-footprint");
-    const splashLayer = document.querySelector(".splash-layer");
-    if (!footprint || !splashLayer) return;
-
-    const onMove = (event) => {
-      footprint.style.left = `${event.clientX}px`;
-      footprint.style.top = `${event.clientY}px`;
-      footprint.style.opacity = "1";
-    };
-
-    const onLeave = () => {
-      footprint.style.opacity = "0";
-    };
-
-    const onClick = (event) => {
-      const splash = document.createElement("span");
-      splash.className = "click-splash";
-      splash.style.left = `${event.clientX}px`;
-      splash.style.top = `${event.clientY}px`;
-      splashLayer.appendChild(splash);
-      splash.addEventListener("animationend", () => splash.remove(), { once: true });
-    };
-
-    window.addEventListener("mousemove", onMove, { passive: true });
-    window.addEventListener("mouseleave", onLeave, { passive: true });
-    window.addEventListener("click", onClick, { passive: true });
-
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseleave", onLeave);
-      window.removeEventListener("click", onClick);
-    };
-  }, []);
 
   return (
     <>
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
-      <div className="cursor-footprint" aria-hidden="true" />
-      <div className="splash-layer" aria-hidden="true" />
 
       <div className={`loading-screen ${loading ? "" : "hide"}`} aria-hidden={!loading}>
         <div className="loading-inner">

@@ -51,7 +51,9 @@ function Navbar() {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={active === link.id ? "active" : ""}
+              className={`${active === link.id ? "active" : ""} ${
+                link.id === "hero" ? "home-link" : ""
+              }`.trim()}
               onClick={() => handleClick(link.id)}
             >
               {link.label}
@@ -75,7 +77,9 @@ function Navbar() {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={active === link.id ? "active" : ""}
+              className={`${active === link.id ? "active" : ""} ${
+                link.id === "hero" ? "home-link" : ""
+              }`.trim()}
               onClick={() => handleClick(link.id)}
             >
               {link.label}
