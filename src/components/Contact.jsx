@@ -1,4 +1,33 @@
+import { useState } from "react";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const subject = formData.subject.trim() || "Portfolio Contact";
+    const body = [
+      `Name: ${formData.name.trim() || "N/A"}`,
+      `Email: ${formData.email.trim() || "N/A"}`,
+      "",
+      formData.message.trim() || "No message provided.",
+    ].join("\n");
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=raianup806@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="section" id="contact">
       <div className="container reveal">
@@ -7,26 +36,50 @@ function Contact() {
         <div className="contact-grid">
           <article className="glass-card contact-card contact-form-card">
             <h3>Send a Message</h3>
-            <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="contact-row">
                 <label>
                   Name
-                  <input type="text" placeholder="Your name" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                  />
                 </label>
                 <label>
                   Email
-                  <input type="email" placeholder="your@email.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
+                  />
                 </label>
               </div>
 
               <label>
                 Subject
-                <input type="text" placeholder="Subject" />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                />
               </label>
 
               <label>
                 Message
-                <textarea rows="5" placeholder="Write your message" />
+                <textarea
+                  rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message"
+                />
               </label>
 
               <button type="submit" className="contact-submit">
@@ -73,7 +126,7 @@ function Contact() {
 
             <div className="contact-availability">
               <strong>Availability</strong>
-              <p>I typically reply within 24 hours. Open to internships, research collaboration, and freelance opportunities.</p>
+              <p>Available for internships, research collaborations, and freelance opportunities. I usually respond within 24 hours.</p>
             </div>
           </article>
         </div>

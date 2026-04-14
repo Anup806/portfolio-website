@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=Rubik+Glitch&display=swap");
 @import url("https://fonts.cdnfonts.com/css/norwester");
+@import url("https://fonts.cdnfonts.com/css/bisdak");
 
 :root {
   --bg-primary: #0d0d14;
@@ -25,6 +26,7 @@
   --font-body: "Inter", sans-serif;
   --font-glitch: "Rubik Glitch", system-ui;
   --font-norwester: "Norwester", "Manrope", sans-serif;
+  --font-bisdak: "Bisdak", "BISDAK DEMO", "Rubik Glitch", "Manrope", sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -437,7 +439,7 @@ main {
 }
 
 .hero h1 {
-  font-family: var(--font-glitch);
+  font-family: var(--font-bisdak);
   font-size: clamp(7.5rem, 21vw, 13.5rem);
   line-height: 0.95;
   letter-spacing: 10px;
