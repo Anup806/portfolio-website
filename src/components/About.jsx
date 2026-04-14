@@ -1,6 +1,8 @@
 import Skills from "./Skills";
 
 function About() {
+  const profileImageUrl = `${import.meta.env.BASE_URL}ProfilePic.png`;
+
   return (
     <section className="section" id="about">
       <div className="container about-grid">
@@ -23,7 +25,7 @@ function About() {
         <div className="about-photo-frame reveal">
           <img
             className="about-photo"
-            src="/ProfilePic.png"
+            src={profileImageUrl}
             alt="Anup Rai profile photo"
             onError={(event) => {
               event.currentTarget.style.display = "none";
