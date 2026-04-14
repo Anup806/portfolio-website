@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         <div className="footer-divider" />
-        <p>@ Anup Rai, All rights reserved.</p>
+        <p>Copyright (c) 2026 Anup Rai. All rights reserved.</p>
       </div>
     </footer>
   );
