@@ -2,31 +2,23 @@ function Research() {
   return (
     <section className="section" id="research">
       <div className="container reveal">
-        <h2 className="section-title">Research</h2>
+        <h2 className="section-title">RESEARCH</h2>
 
         <article className="glass-card research-card">
           <div className="research-head">
-            <h3>DKT-Based AR Framework for Predictive Learning Assessment</h3>
-            <span className="badge award-badge">🏆 Best Paper Award — AI &amp; ML Track</span>
+            <div>
+              <h3>DKT-Based AR Framework for Predictive Learning Assessment</h3>
+              <p className="research-meta">
+                <em>IEEE ICTP 2026</em> | <strong>Best Paper Award — AI &amp; ML Track</strong>
+              </p>
+            </div>
+            <span className="research-year">2025 – 2026</span>
           </div>
 
-          <p className="venue">IEEE ICTP 2026 (DOI Pending)</p>
-
-          <div className="metric-row">
-            <div className="metric-card">
-              <span className="metric-value green">0.84</span>
-              <span className="metric-label">Accuracy</span>
-            </div>
-            <div className="metric-card">
-              <span className="metric-value cyan">0.82</span>
-              <span className="metric-label">PR-AUC</span>
-            </div>
-          </div>
-
-          <ul className="project-list">
-            <li>Adaptive AR system using Deep Knowledge Tracing (DKT)</li>
-            <li>Research-Through-Design (RTD) methodology</li>
-            <li>Field deployed with real students</li>
+          <ul className="research-points">
+            <li>Designed an adaptive Augmented Reality system using Deep Knowledge Tracing (DKT)</li>
+            <li>Developed system architecture following Research-Through-Design (RTD) methodology</li>
+            <li>Achieved Accuracy: 0.84 and PR-AUC: 0.82 in real-world classroom deployment</li>
           </ul>
         </article>
       </div>

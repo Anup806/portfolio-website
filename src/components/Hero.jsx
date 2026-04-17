@@ -8,7 +8,7 @@ const heroTaglines = [
 ];
 
 function Hero() {
-  const resumeUrl = `${import.meta.env.BASE_URL}AnupRai_Resume.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}AnupRaiResume.pdf`;
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -52,7 +52,7 @@ function Hero() {
           {typedText}
           <span className="cursor">|</span>
         </p>
-        <a className="download-cv" href={resumeUrl} download="AnupRai_Resume.pdf">
+        <a className="download-cv" href={resumeUrl} download="AnupRaiResume.pdf">
           Download CV
         </a>
 

@@ -792,6 +792,9 @@ main h6 {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .research-head h3 {
@@ -799,50 +802,31 @@ main h6 {
   font-size: clamp(1.3rem, 2.5vw, 1.9rem);
 }
 
-.award-badge {
-  background: rgba(245, 158, 11, 0.22);
-  color: #fde68a;
-}
-
-.venue {
-  color: var(--accent-cyan);
-  margin: 12px 0 16px;
-  font-weight: 600;
-}
-
-.metric-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.metric-card {
-  min-width: 120px;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.metric-value {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1.7rem;
-  line-height: 1;
-}
-
-.metric-value.green {
-  color: var(--accent-green);
-}
-
-.metric-value.cyan {
-  color: var(--accent-cyan);
-}
-
-.metric-label {
+.research-meta {
+  margin-top: 4px;
   color: var(--text-muted);
-  font-size: 0.86rem;
+  font-size: 0.98rem;
+}
+
+.research-meta strong {
+  color: var(--text-primary);
+}
+
+.research-year {
+  flex: 0 0 auto;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.research-points {
+  color: var(--text-muted);
+  padding-left: 20px;
+}
+
+.research-points li {
+  margin-top: 10px;
 }
 
 /* Education */
