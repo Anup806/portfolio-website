@@ -20,6 +20,19 @@ function Research() {
             <li>Developed system architecture following Research-Through-Design (RTD) methodology</li>
             <li>Achieved Accuracy: 0.84 and PR-AUC: 0.82 in real-world classroom deployment</li>
           </ul>
+
+          <div className="research-view">
+            <span className="research-view-label">View</span>
+            <a
+              className="btn-outline research-link"
+              href="https://ieeexplore.ieee.org/document/11485369"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View the research paper on IEEE Xplore"
+            >
+              IEEE Xplore
+            </a>
+          </div>
         </article>
       </div>
     </section>
