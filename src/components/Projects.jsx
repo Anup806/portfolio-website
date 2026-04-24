@@ -112,7 +112,7 @@ function Projects() {
             <div className="project-actions corner-actions">
               <a
                 className="youtube-btn"
-                href="https://youtu.be/BWyTLyucJ8Q"
+                href="https://youtu.be/95QFCS6z438"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Watch project demo on YouTube"
