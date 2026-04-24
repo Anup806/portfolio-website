@@ -695,7 +695,12 @@ main h6 {
 .project-card {
   padding: 20px;
   border-top: 3px solid var(--accent-purple);
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card.has-corner-actions {
+  padding-bottom: 76px;
 }
 
 .project-card.cyan {
@@ -773,6 +778,40 @@ main h6 {
 .github-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 24px rgba(124, 58, 237, 0.4);
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-actions.corner-actions {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+}
+
+.youtube-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  display: grid;
+  place-items: center;
+  background: rgba(239, 68, 68, 0.16);
+  color: #fecaca;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.youtube-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.youtube-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(239, 68, 68, 0.45);
 }
 
 .final-badge {

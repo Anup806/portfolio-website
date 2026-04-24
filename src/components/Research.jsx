@@ -22,7 +22,7 @@ function Research() {
           </ul>
 
           <div className="research-view">
-            <span className="research-view-label">View</span>
+            <span className="research-view-label"></span>
             <a
               className="btn-outline research-link"
               href="https://ieeexplore.ieee.org/document/11485369"
