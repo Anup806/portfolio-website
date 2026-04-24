@@ -9,14 +9,13 @@ function About() {
         <div className="about-text reveal">
           <h2 className="section-title">About Me</h2>
           <p>
-            Final-year Electronics &amp; Communication Engineering student specializing in applied machine learning and data analytics.
+            Machine learning enthusiast and ECE student building practical AI systems, including RAG-based applications, local LLM pipelines, and real-time computer vision solutions.
           </p>
           <p>
-            Experienced in building real-time intelligent systems using probabilistic modeling, gesture-based interaction, and
-            LLM-powered applications.
+            Strong in Python, data analysis, and applied ML, with a focus on solving real-world problems through deployable AI systems.
           </p>
           <p>
-            IEEE Best Paper Award recipient (AI &amp; ML Track, 2026)
+            IEEE Best Paper Award recipient (AI & ML Track, 2026).
           </p>
 
           <Skills />
