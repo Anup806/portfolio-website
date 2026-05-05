@@ -8,7 +8,6 @@ const heroTaglines = [
 ];
 
 function Hero() {
-  const resumeUrl = `${import.meta.env.BASE_URL}Anup-Rai-CV.pdf`;
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -52,9 +51,14 @@ function Hero() {
           {typedText}
           <span className="cursor">|</span>
         </p>
-        <a className="download-cv" href={resumeUrl} download="Anup-Rai-CV.pdf">
-          Download CV
-        </a>
+        <div className="hero-ctas">
+          <a className="btn-primary" href="#about">
+            About Me
+          </a>
+          <a className="btn-outline" href="#contact">
+            Contact
+          </a>
+        </div>
 
         <a className="scroll-indicator" href="#about" aria-label="Scroll down">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
