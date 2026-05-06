@@ -1,7 +1,7 @@
 const skills = [
   { key: "python", label: "Python" },
   { key: "cpp", label: "C/C++" },
-  { key: "ml", label: "ML/Data" },
+  { key: "ml", label: "ML/AI" },
   { key: "git", label: "Git" },
 ];
 
