@@ -1,23 +1,23 @@
 const items = [
   { 
-    icon: "📘", 
-    text: "Data Science with Python — Code IT (2026)", 
-    tone: "purple"
-  },
-  { 
     icon: "🏆", 
     text: "Best Paper Award — IEEE ICTP 2026", 
     tone: "yellow"
   },
   { 
     icon: "⚡", 
-    text: "IEEE Volunteer", 
+    text: "IEEE Participation", 
     tone: "cyan"
   },
   { 
     icon: "🎓", 
-    text: "IEEE Participation", 
+    text: "IEEE Volunteer", 
     tone: "green"
+  },
+  { 
+    icon: "📘", 
+    text: "Data Science with Python — Code IT (2026)", 
+    tone: "purple"
   },
 ];
 
