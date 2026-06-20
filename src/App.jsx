@@ -172,8 +172,8 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Research />
+        <Projects />
         <Education />
         <Certifications />
         <Contact />
