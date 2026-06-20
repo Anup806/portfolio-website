@@ -799,15 +799,17 @@ main h6 {
 
 .skills-icon-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  padding-bottom: 8px;
 }
 
 .skill-icon-card {
-  padding: 12px;
+  padding: 8px;
   display: flex;
   align-items: center;
-  gap: 9px;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .skill-icon-card h3 {
@@ -816,8 +818,8 @@ main h6 {
 }
 
 .skill-logo {
-  width: 34px;
-  height: 34px;
+  width: 68px;
+  height: 68px;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
@@ -827,8 +829,8 @@ main h6 {
 }
 
 .skill-logo svg {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
 }
 
 .skill-logo.git {
@@ -1488,7 +1490,7 @@ main h6 {
   }
 
   .skills-icon-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .about-photo-frame {

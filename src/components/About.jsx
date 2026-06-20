@@ -9,13 +9,13 @@ function About() {
         <div className="about-text reveal">
           <h2 className="section-title">About Me</h2>
           <p>
-            Machine learning enthusiast and ECE student building practical AI systems, including RAG-based applications, local LLM pipelines, and real-time computer vision solutions.
+            Electronics and Communication Engineering graduate transitioning into AI/ML through self-directed learning and applied projects.
           </p>
           <p>
-            Strong in Python, data analysis, and applied ML, with a focus on solving real-world problems through deployable AI systems.
+            Recipient of the IEEE Best Paper Award (ICTP 2026, AI & ML Track) for research in Deep Knowledge Tracing.
           </p>
           <p>
-            IEEE Best Paper Award recipient (AI & ML Track, 2026).
+            Proficient in Python, NumPy, Pandas, and Scikit-learn, with hands-on experience in LLM integration and Retrieval-Augmented Generation (RAG) pipelines.
           </p>
 
           <Skills />
