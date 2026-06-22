@@ -1,136 +1,141 @@
-# Anup Rai Portfolio Website
+<div align="center">
 
-A modern personal portfolio built with React and Vite, focused on machine learning, computer vision, and research highlights.
 
-This project presents Anup Rai's profile, projects, education, honors, and contact information in a responsive single-page experience with smooth animations and interactive UI sections.
+# Hi 👋, I'm Anup Rai
 
-## Tech Stack
+### ECE Graduate &nbsp;·&nbsp; Aspiring AI Engineer &nbsp;·&nbsp; IEEE Best Paper Awardee
 
-- React 18
-- Vite 5
-- JavaScript (ES6+)
-- CSS3
+---
 
-## Key Features
+<img align="right" alt="Coding" width="300" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif"/>
 
-- Responsive single-page portfolio layout
-- Animated hero section with typing tagline effect
-- Downloadable CV link
-- About section with profile image and skills
-- Project showcase cards
-- Education timeline and honors/certifications section
-- Contact form that opens pre-filled Gmail compose
-- Social links (LinkedIn, GitHub, Facebook)
-- Loading screen and reveal-on-scroll animations
 
-## Project Structure
+<p align="left">
+Electronics & Communication Engineering graduate from Nepal Engineering College,<br/>
+building intelligent systems — RAG pipelines, computer vision, and adaptive ML applications.<br/>
+Passionate about deployable, real-world AI solutions that solve actual problems.
+</p>
 
-```text
-.
-|- public/
-|  |- AnupRai_Resume.pdf
-|  |- ProfilePic.png
-|- src/
-|  |- components/
-|  |  |- About.jsx
-|  |  |- Certifications.jsx
-|  |  |- Contact.jsx
-|  |  |- Education.jsx
-|  |  |- Footer.jsx
-|  |  |- Hero.jsx
-|  |  |- Navbar.jsx
-|  |  |- Projects.jsx
-|  |  |- Skills.jsx
-|  |- App.jsx
-|  |- global.css
-|  |- main.jsx
-|- index.html
-|- package.json
-|- vite.config.js
-```
 
-## Local Development
+<p align="left">
+🏆 &nbsp;<strong>IEEE Best Paper Award</strong> — AI & ML Track, ICTP 2026<br/>
+🔬 &nbsp;Research in <strong>Deep Knowledge Tracing</strong> · Accuracy: 0.84 · PR-AUC: 0.82<br/>
+📍 &nbsp;Kathmandu, Nepal
+</p>
 
-### Prerequisites
+<br/>
 
-- Node.js 18+ recommended
-- npm
+<p align="center">
 
-### Run Locally
+![Profile Views](https://komarev.com/ghpvc/?username=Anup806&label=Profile+Views&color=0e75b6&style=flat)
 
-```bash
-npm install
-npm run dev
-```
+</p>
 
-Open the local URL shown in the terminal (usually http://localhost:5173).
+</div>
 
-## Build and Preview
+<br clear="both"/>
 
-```bash
-npm run build
-npm run preview
-```
+---
 
-- `npm run build` creates production assets in `dist/`
-- `npm run preview` serves the production build locally
+## 🏆 Achievement
 
-## Deployment
+> **🥇 IEEE Best Paper Award — AI & ML Track**
+> *International Conference on Technology and Policy (ICTP) 2026*
+>
+> Research: *DKT-Based AR Framework for Predictive Learning Assessment*
+> &nbsp;&nbsp;`Accuracy: 0.84` &nbsp; `PR-AUC: 0.82` &nbsp; Real-world classroom deployment
+>
+> 📄 [Read the paper on IEEE Xplore →](https://ieeexplore.ieee.org/document/11485369)
 
-This repository is deployment-ready for static hosts such as Cloudflare Pages, Vercel, Netlify, and GitHub Pages.
+---
 
-### Recommended (Free): Cloudflare Pages
+## 🔬 Research
 
-Use these build settings:
+**DKT-Based AR Framework for Predictive Learning Assessment** &nbsp;|&nbsp; IEEE ICTP 2026
 
-- Framework preset: `Vite`
-- Build command: `npm run build`
-- Build output directory: `dist`
+Designed an adaptive Augmented Reality tutoring system that uses **Deep Knowledge Tracing (DKT)** to predict student mastery in real time and dynamically adapt content difficulty. Built and validated in live classroom environments.
 
-If using a custom domain (including `.com.np`), connect domain DNS to Cloudflare and attach the domain in Pages settings.
+- Applied iterative **Research-Through-Design (RTD)** methodology across development cycles
+- Achieved `Accuracy: 0.84` and `PR-AUC: 0.82` in real-world deployment
+- Awarded **Best Paper** in the AI & ML track at IEEE ICTP 2026
 
-## Asset Notes
+---
 
-- CV and profile photo are stored in `public/`
-- Static asset links use Vite base-aware paths so they work correctly when hosted
-- `dist/` is intentionally ignored by git and should not be committed
 
-## Scripts
+## 🛠️ Tech Stack
 
-- `npm run dev` starts development server
-- `npm run build` creates production build
-- `npm run preview` previews production build
+<div align="center">
 
-## Customization Guide
 
-- Update personal intro and text content in component files under `src/components/`
-- Update colors, typography, and layout in `src/global.css`
-- Replace `public/ProfilePic.png` and `public/AnupRai_Resume.pdf` with your own files while keeping filenames (or update links accordingly)
+[![Tech Stack](https://skillicons.dev/icons?i=python,sklearn,opencv,fastapi,docker,git,unity,c,cpp,matlab&perline=)](https://skillicons.dev)
 
-## Repository Hygiene
+<p>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="HuggingFace"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logoColor=white" alt="LangChain"/>
+  &nbsp;
+  &nbsp;
+  <img src="https://img.shields.io/badge/ChromaDB-FF6B35?style=flat-square&logoColor=white" alt="ChromaDB"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logoColor=white" alt="Ollama"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/MediaPipe-0097A7?style=flat-square&logo=google&logoColor=white" alt="MediaPipe"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/YOLO-00CCCC?style=flat-square&logoColor=black" alt="YOLO"/>
+</p>
 
-This project ignores the following paths and files:
 
-- `node_modules/`
-- `dist/`
-- `.env`
-- `.DS_Store`
 
-## License and Copyright
+---
 
-This project is proprietary and released under a custom all-rights-reserved license.
+## 📊 GitHub Stats
 
-- See `LICENSE` for full legal terms.
-- You may not copy, redistribute, modify, sell, or reuse the code/design/content without prior written permission from the author.
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Anup806&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&hide_rank=true" alt="Anup's GitHub Stats" height="165"/>
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Anup806&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&size_weight=0.5&count_weight=0.5&hide=Jupyter%20Notebook" alt="Top Languages" height="165"/>
+</p>
 
-## Content Protection Notes
+<p align="center">
+<img src="https://streak-stats.demolab.com/?user=Anup806&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
+</p>
 
-This site includes basic deterrents in production (for example context menu and copy shortcuts blocking), but no website can be made 100% copy-proof on the public internet. The strongest protection is legal ownership + clear licensing + timestamped repository history.
+---
 
-## Author
 
-Anup Rai
 
-- GitHub: https://github.com/Anup806
-- LinkedIn: https://www.linkedin.com/in/anup-rai-095695343/
+## 🤝 Connect With Me
 
+<p align="center">
+  <a href="https://linkedin.com/in/anup-rai-095695343" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="https://anuprai1.com.np" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
+  </a>
+  &nbsp;
+  <a href="mailto:raianup806@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <em>"Went from designing analog circuits to building RAG pipelines and AR systems —<br/>the signal never stopped, just changed medium."</em>
+</p>
+
+---
+
+## License
+
+Copyright (c) 2026 Anup Rai. All rights reserved.
+
+This repository and its contents are available only for personal, non-commercial reference. No permission is granted to use, copy, modify, distribute, sublicense, sell, or create derivative works without prior written consent.
+
+For licensing requests, contact: raianup806@gmail.com
