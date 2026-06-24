@@ -81,6 +81,34 @@ const projects = [
       },
     ],
   },
+
+    {
+    title: "Outreach Pilot",
+    tech: ["Python", "Streamlit", "Gemini API", "Gmail SMTP", "SQLite"],
+    points: [
+      "Parses PDF resumes and generates personalized cold emails using Gemini API",
+      "Automates email scheduling via Gmail SMTP with delay control and duplicate prevention",
+      "Runs a server-side daemon to send queued emails independent of browser session",
+    ],
+    links: [
+      {
+        className: "demo-btn",
+        href: "https://ai-outreach-assistant--raianup806.replit.app/",
+        label: "Open AI-Powered Job Outreach Automation Tool live demo",
+        title: "Live demo",
+        icon: demoIcon,
+      },
+      {
+        className: "github-btn",
+        href: "https://github.com/Anup806/AI-Outreach-Assistant",
+        label: "Open AI-Outreach-Assistant repository",
+        title: "GitHub repository",
+        icon: githubIcon,
+      },
+    ],
+  },
+
+
   {
     title: "Adaptive Mixed-Reality Math Tutor",
     badge: "Final Year Project",
@@ -118,31 +146,7 @@ const projects = [
       },
     ],
   },
-  {
-    title: "AI-Powered Job Outreach Automation Tool",
-    tech: ["Python", "Streamlit", "Gemini API", "Gmail SMTP", "SQLite"],
-    points: [
-      "Parses PDF resumes and generates personalized cold emails using Gemini API",
-      "Automates email scheduling via Gmail SMTP with delay control and duplicate prevention",
-      "Runs a server-side daemon to send queued emails independent of browser session",
-    ],
-    links: [
-      {
-        className: "demo-btn",
-        href: "https://ai-outreach-assistant--raianup806.replit.app/",
-        label: "Open AI-Powered Job Outreach Automation Tool live demo",
-        title: "Live demo",
-        icon: demoIcon,
-      },
-      {
-        className: "github-btn",
-        href: "https://github.com/Anup806/AI-Outreach-Assistant",
-        label: "Open AI-Outreach-Assistant repository",
-        title: "GitHub repository",
-        icon: githubIcon,
-      },
-    ],
-  },
+
 ];
 
 function Projects() {
