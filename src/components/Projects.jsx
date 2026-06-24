@@ -83,7 +83,7 @@ const projects = [
   },
 
     {
-    title: "Outreach Pilot",
+    title: "Outreach Assistance",
     tech: ["Python", "Streamlit", "Gemini API", "Gmail SMTP", "SQLite"],
     points: [
       "Parses PDF resumes and generates personalized cold emails using Gemini API",
