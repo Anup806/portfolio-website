@@ -715,8 +715,8 @@ main h6 {
   align-self: center;
   justify-self: center;
   width: min(400px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-lg);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   padding: 10px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--glass-border);
@@ -728,7 +728,7 @@ main h6 {
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: calc(var(--radius-lg) - 6px);
+  border-radius: 50%;
   object-fit: cover;
 }
 
