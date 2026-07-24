@@ -20,7 +20,33 @@ const demoIcon = (
 
 const projects = [
   {
+    title: "Grounded RAG Assistant",
+    tech: ["Python", "FastAPI", "Qdrant", "Groq API"],
+    points: [
+      "Full-stack RAG assistant with dual REST APIs for ingestion and retrieval",
+      "Qdrant-based vector search with two chunking strategies",
+      "Fixed multi-turn hallucination bug via deterministic state tracking",
+    ],
+    links: [
+      {
+        className: "youtube-btn",
+        href: "https://youtu.be/_uKX9vYBv1w",
+        label: "Watch Grounded RAG Assistant demo video",
+        title: "Watch demo video",
+        icon: youtubeIcon,
+      },
+      {
+        className: "github-btn",
+        href: "https://github.com/Anup806/grounded-rag-assistant",
+        label: "Open Grounded RAG Assistant with Two REST APIs repository",
+        title: "GitHub repository",
+        icon: githubIcon,
+      },
+    ],
+  },
+  {
     title: "Document Query Engine",
+    accent: "cyan",
     tech: ["Python", "FastAPI", "LlamaIndex", "Docker"],
     points: [
       "RAG-based document Q&A with voice chat support",
@@ -28,6 +54,13 @@ const projects = [
       "Fully containerized with Docker, CLI + Web UI",
     ],
     links: [
+      {
+        className: "youtube-btn",
+        href: "https://youtu.be/QCVw8kZ5SOw",
+        label: "Watch Document Query Engine demo video",
+        title: "Watch demo video",
+        icon: youtubeIcon,
+      },
       {
         className: "github-btn",
         href: "https://github.com/Anup806/Document-Query-Engine",
@@ -39,7 +72,6 @@ const projects = [
   },
   {
     title: "Local Letter RAG",
-    accent: "cyan",
     tech: ["Python", "FastAPI", "Ollama", "ChromaDB"],
     points: [
       "Fully offline PDF assistant - no cloud API needed",
@@ -65,6 +97,7 @@ const projects = [
   },
   {
     title: "Padel Game Analytics",
+    accent: "cyan",
     tech: ["Python", "YOLOv8", "OpenCV", "Pandas"],
     points: [
       "Shot classification system (forehand, backhand, serve, smash)",
@@ -111,6 +144,7 @@ const projects = [
 
   {
     title: "Adaptive Mixed-Reality Math Tutor",
+    accent: "cyan",
     badge: "Final Year Project",
     tech: ["Python", "OpenCV", "MediaPipe", "scikit-learn"],
     points: [
