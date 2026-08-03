@@ -164,7 +164,6 @@ const projects = [
   },
   {
     title: "Gesture-Controlled 3D Interaction Engine",
-    accent: "cyan",
     tech: ["Unity", "C#", "MediaPipe"],
     points: [
       "Low-latency hand-tracking interface",
