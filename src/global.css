@@ -1112,43 +1112,90 @@ main h6 {
 }
 
 /* Certifications */
-.cert-row {
+.cert-intro {
+  max-width: 620px;
+  margin: 0 0 24px;
+  color: var(--text-muted);
+}
+
+.cert-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0 18px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000000 7%, #000000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000000 7%, #000000 93%, transparent);
+}
+
+.cert-marquee-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  width: max-content;
+  transform: translateX(0);
+  animation: certScrollRight 52s linear infinite;
+  will-change: transform;
 }
 
-.cert-chip {
-  padding: 10px 14px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.cert-marquee:hover .cert-marquee-track {
+  animation-play-state: paused;
+}
+
+.cert-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 18px;
+  padding-right: 18px;
+}
+
+.cert-card {
+  flex: 0 0 auto;
+  width: clamp(280px, 38vw, 470px);
+  overflow: hidden;
   border: 1px solid var(--glass-border);
-  background: var(--bg-card);
-  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.cert-chip:hover {
-  transform: translateY(-4px) scale(1.03);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 20px 38px rgba(245, 158, 11, 0.18), 0 16px 34px rgba(0, 0, 0, 0.24);
 }
 
-.cert-chip.purple {
-  color: #ddd6fe;
+.cert-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.414 / 1;
+  object-fit: cover;
+  background: #111827;
 }
 
-.cert-chip.yellow {
-  color: #fde68a;
+.cert-card figcaption {
+  display: grid;
+  gap: 2px;
+  min-height: 70px;
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--glass-border);
+  background: rgba(13, 13, 20, 0.72);
 }
 
-.cert-chip.cyan {
-  color: #a5f3fc;
+[data-theme="light"] .cert-card figcaption {
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.cert-chip.green {
-  color: #86efac;
+.cert-card-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.cert-card-meta {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.35;
 }
 
 
@@ -1465,6 +1512,15 @@ main h6 {
   }
 }
 
+@keyframes certScrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero::before,
   .hero::after {
@@ -1473,6 +1529,28 @@ main h6 {
 
   .typewriter {
     animation: none;
+  }
+
+  .cert-marquee {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .cert-marquee-track {
+    width: 100%;
+    transform: none;
+    animation: none;
+  }
+
+  .cert-marquee-group {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .cert-marquee-group[aria-hidden="true"] {
+    display: none;
   }
 }
 
@@ -1541,5 +1619,20 @@ main h6 {
 
   .contact-row {
     grid-template-columns: 1fr;
+  }
+
+  .cert-marquee {
+    width: calc(100% + 6vw);
+    margin-left: -3vw;
+    margin-right: -3vw;
+  }
+
+  .cert-card {
+    width: min(82vw, 360px);
+  }
+
+  .cert-card figcaption {
+    min-height: 64px;
+    padding: 10px 12px 12px;
   }
 }
