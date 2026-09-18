@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const heroTaglines = [
-  "AI Engineer building RAG systems, LLM applications, and applied ML pipelines.",
-  "IEEE Best Paper Awardee",
-  "Electronics and Communication Engineering Graduate",
+  "AI Engineer building RAG, LLMs & ML Pipelines...",
+  "IEEE Best Paper Awardee...",
+  "Electronics and Communication Engineering Graduate...",
 ];
 
 function Hero() {
