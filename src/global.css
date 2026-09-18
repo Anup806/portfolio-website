@@ -144,7 +144,6 @@ section.visible .section-title::after {
 #contact .section-title {
   display: block;
   width: 100%;
-  text-align: center;
   text-transform: uppercase;
 }
 
