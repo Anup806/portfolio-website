@@ -133,6 +133,32 @@ section.visible .section-title::after {
   width: 60px;
 }
 
+/* Centered, uppercase section titles: About, Research, Experience,
+   Projects, Education, Certifications & Honors, Contact. */
+#about .section-title,
+#research .section-title,
+#experience .section-title,
+#projects .section-title,
+#education .section-title,
+#honors .section-title,
+#contact .section-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#about .section-title::after,
+#research .section-title::after,
+#experience .section-title::after,
+#projects .section-title::after,
+#education .section-title::after,
+#honors .section-title::after,
+#contact .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .btn-primary,
 .btn-outline {
   display: inline-flex;
