@@ -21,7 +21,6 @@ function Hero() {
         <aside className="hero-highlight" aria-label="Featured recognition">
           <div className="highlight-topline">
             <span>Featured recognition</span>
-            <span className="award-mark" aria-hidden="true">✦</span>
           </div>
           <h2>Best Paper Award</h2>
           <p>AI &amp; ML Track · IEEE ICTP 2026</p>
