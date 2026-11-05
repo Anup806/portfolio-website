@@ -1,7 +1,7 @@
 function Research() {
   return (
     <section className="section" id="research">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">RESEARCH</h2>
 
         <article className="glass-card research-card">
@@ -17,7 +17,7 @@ function Research() {
 
           <ul className="research-points">
             <li>Designed an adaptive Augmented Reality system using Deep Knowledge Tracing (DKT)</li>
-            <li>Developed system architecture following interative Research-Through-Design (RTD) methodology and Pilot Testing</li>
+            <li>Developed the system architecture using an iterative Research-Through-Design (RTD) methodology and pilot testing</li>
             <li>Achieved Accuracy: 0.84 and PR-AUC: 0.82 in real-world classroom deployment</li>
           </ul>
 

@@ -1,7 +1,7 @@
 function Experience() {
   return (
     <section className="section" id="experience">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">EXPERIENCE</h2>
 
         <article className="glass-card research-card">
@@ -14,8 +14,6 @@ function Experience() {
             </div>
             <span className="research-year">Dec 2025 – Feb 2026</span>
           </div>
-
-          <p className="research-meta" style={{ marginTop: 8 }}></p>
 
           <ul className="research-points">
             <li>

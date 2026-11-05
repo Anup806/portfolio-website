@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { id: "hero", label: "Home" },
   { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
   { id: "research", label: "Research" },
   { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
   { id: "education", label: "Education" },
   { id: "honors", label: "Honors" },
   { id: "contact", label: "Contact" },
@@ -14,7 +13,7 @@ const links = [
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("hero");
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,7 +27,7 @@ function Navbar() {
         })
         .filter(Boolean);
 
-      const current = sectionOffsets.find((section) => section.top > -160 && section.top < 260);
+      const current = sectionOffsets.filter((section) => section.top <= 180).at(-1);
       if (current) {
         setActive(current.id);
       }
@@ -40,6 +39,17 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
+
   const handleClick = (id) => {
     setActive(id);
     setOpen(false);
@@ -48,14 +58,18 @@ function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-inner">
-        <nav className="nav-links">
+        <a className="brand" href="#hero" aria-label="Anup Rai, home">
+          <span className="brand-mark" aria-hidden="true">AR</span>
+          <span>Anup Rai</span>
+        </a>
+
+        <nav className="nav-links" aria-label="Primary navigation">
           {links.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={`${active === link.id ? "active" : ""} ${
-                link.id === "hero" ? "home-link" : ""
-              }`.trim()}
+              className={active === link.id ? "active" : ""}
+              aria-current={active === link.id ? "location" : undefined}
               onClick={() => handleClick(link.id)}
             >
               {link.label}
@@ -68,26 +82,32 @@ function Navbar() {
             type="button"
             className="menu-btn"
             onClick={() => setOpen((prev) => !prev)}
-            aria-label="Toggle menu"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
-            ☰
+            <span aria-hidden="true">{open ? "×" : "☰"}</span>
           </button>
         </div>
 
-        <div className={`mobile-drawer ${open ? "open" : ""}`}>
+        <nav
+          className={`mobile-drawer ${open ? "open" : ""}`}
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          aria-hidden={!open}
+        >
           {links.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={`${active === link.id ? "active" : ""} ${
-                link.id === "hero" ? "home-link" : ""
-              }`.trim()}
+              className={active === link.id ? "active" : ""}
+              aria-current={active === link.id ? "location" : undefined}
               onClick={() => handleClick(link.id)}
             >
               {link.label}
             </a>
           ))}
-        </div>
+        </nav>
       </div>
     </header>
   );

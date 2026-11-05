@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-inner reveal">
+      <div className="footer-inner">
         <div className="footer-social">
           <a className="social-icon github" href="https://github.com/Anup806" target="_blank" rel="noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor">

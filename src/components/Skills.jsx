@@ -25,9 +25,9 @@ const ICON_SRC = {
   c: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
   cpp: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
   matlab: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
-  langchain: "https://cdn.simpleicons.org/langchain/FFFFFF",
+  langchain: "https://cdn.simpleicons.org/langchain/1C3C3C",
   docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  unity: "https://cdn.simpleicons.org/unity/FFFFFF",
+  unity: "https://cdn.simpleicons.org/unity/000000",
   huggingface: "https://cdn.simpleicons.org/huggingface/FFD21E",
 };
 
@@ -79,7 +79,7 @@ function SkillLogo({ type }) {
   return (
     <img
       src={src}
-      alt={label}
+      alt=""
       loading="lazy"
       onError={() => setFailed(true)}
       style={{ width: "100%", height: "100%", objectFit: "contain" }}
@@ -96,10 +96,11 @@ function Skills() {
         <h2 className="section-title">Tech Stack</h2>
         <div className="skills-icon-grid">
           {skills.map((skill) => (
-            <article className="skill-icon-card" key={skill.key} title={skill.label}>
+            <article className="skill-icon-card" key={skill.key}>
               <span className={`skill-logo ${skill.key}`}>
                 <SkillLogo type={skill.key} />
               </span>
+              <h3>{skill.label}</h3>
             </article>
           ))}
         </div>

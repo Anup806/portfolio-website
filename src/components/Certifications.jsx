@@ -25,12 +25,12 @@ const certificates = [
   },
 ];
 
-function CertificateCard({ certificate, duplicate = false }) {
+function CertificateCard({ certificate }) {
   return (
-    <figure className="cert-card" aria-hidden={duplicate || undefined}>
+    <figure className="cert-card">
       <img
         src={certificate.src}
-        alt={duplicate ? "" : certificate.alt}
+        alt={certificate.alt}
         loading="lazy"
         decoding="async"
         draggable="false"
@@ -46,27 +46,14 @@ function CertificateCard({ certificate, duplicate = false }) {
 function Certifications() {
   return (
     <section className="section" id="honors">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">Certifications &amp; Honors</h2>
         <p className="cert-intro">Selected recognitions from IEEE ICTP 2026 and Code IT.</p>
 
-        <div className="cert-marquee" aria-label="Certification and honors gallery">
-          <div className="cert-marquee-track">
-            <div className="cert-marquee-group">
-              {certificates.map((certificate) => (
-                <CertificateCard key={certificate.title} certificate={certificate} />
-              ))}
-            </div>
-            <div className="cert-marquee-group" aria-hidden="true">
-              {certificates.map((certificate) => (
-                <CertificateCard
-                  key={`${certificate.title}-duplicate`}
-                  certificate={certificate}
-                  duplicate
-                />
-              ))}
-            </div>
-          </div>
+        <div className="cert-grid" aria-label="Certification and honors gallery">
+          {certificates.map((certificate) => (
+            <CertificateCard key={certificate.title} certificate={certificate} />
+          ))}
         </div>
       </div>
     </section>

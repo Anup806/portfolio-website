@@ -185,13 +185,13 @@ const projects = [
 function Projects() {
   return (
     <section className="section" id="projects">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">Projects</h2>
 
         <div className="projects-grid">
           {projects.map((project) => (
             <article
-              className={`glass-card project-card ${project.accent || ""} has-corner-actions`}
+              className={`glass-card project-card ${project.accent || ""}`}
               key={project.title}
             >
               {project.badge ? <span className="badge final-badge">{project.badge}</span> : null}
@@ -211,10 +211,10 @@ function Projects() {
                 ))}
               </ul>
 
-              <div className="project-actions corner-actions">
+              <div className="project-actions">
                 {project.links.map((link) => (
                   <a
-                    className={link.className}
+                    className={`project-link ${link.className}`}
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
@@ -223,6 +223,7 @@ function Projects() {
                     key={link.href}
                   >
                     {link.icon}
+                    <span>{link.title}</span>
                   </a>
                 ))}
               </div>

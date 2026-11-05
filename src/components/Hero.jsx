@@ -1,69 +1,35 @@
-import { useEffect, useState } from "react";
-
-const heroTaglines = [
-  "AI Engineer building RAG, LLMs & ML Pipelines...",
-  "IEEE Best Paper Awardee...",
-  "Electronics and Communication Engineering Graduate...",
-];
-
 function Hero() {
-  const [taglineIndex, setTaglineIndex] = useState(0);
-  const [typedText, setTypedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentTagline = heroTaglines[taglineIndex];
-    const typingDelay = isDeleting ? 45 : 85;
-
-    const timer = window.setTimeout(() => {
-      if (!isDeleting) {
-        const nextText = currentTagline.slice(0, typedText.length + 1);
-        setTypedText(nextText);
-
-        if (nextText === currentTagline) {
-          window.setTimeout(() => setIsDeleting(true), 1100);
-        }
-      } else {
-        const nextText = currentTagline.slice(0, typedText.length - 1);
-        setTypedText(nextText);
-
-        if (nextText.length === 0) {
-          setIsDeleting(false);
-          setTaglineIndex((prev) => (prev + 1) % heroTaglines.length);
-        }
-      }
-    }, typingDelay);
-
-    return () => window.clearTimeout(timer);
-  }, [isDeleting, taglineIndex, typedText]);
-
   return (
-    <section className="hero" id="hero">
-      <div className="hero-orb one" />
-      <div className="hero-orb two" />
-      <div className="hero-orb three" />
-
-      <div className="hero-content reveal">
-        <h1>ANUP RAI</h1>
-
-        <p className="typewriter">
-          {typedText}
-          <span className="cursor">|</span>
-        </p>
-        <div className="hero-ctas">
-          <a className="btn-primary" href="#about">
-            About Me
-          </a>
-          <a className="btn-outline" href="#contact">
-            Contact
-          </a>
+    <section className="hero" id="hero" aria-labelledby="hero-title">
+      <div className="hero-content">
+        <div className="hero-copy">
+          <p className="hero-eyebrow">AI/ML engineer · LLM applications · Research</p>
+          <h1 id="hero-title">Building practical <span>AI systems.</span></h1>
+          <p className="hero-summary">
+            I’m Anup Rai, an Electronics and Communication Engineering graduate focused on applied machine learning, retrieval-augmented generation, and adaptive learning experiences.
+          </p>
+          <div className="hero-ctas">
+            <a className="btn-primary" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
+            <a className="btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div className="hero-meta" aria-label="Location and background">
+            <span>Bhaktapur, Nepal</span>
+            <span>Electronics &amp; Communication Engineering</span>
+          </div>
         </div>
 
-        <a className="scroll-indicator" href="#about" aria-label="Scroll down">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </a>
+        <aside className="hero-highlight" aria-label="Featured recognition">
+          <div className="highlight-topline">
+            <span>Featured recognition</span>
+            <span className="award-mark" aria-hidden="true">✦</span>
+          </div>
+          <h2>Best Paper Award</h2>
+          <p>AI &amp; ML Track · IEEE ICTP 2026</p>
+          <div className="highlight-divider" />
+          <a href="https://ieeexplore.ieee.org/document/11485369" target="_blank" rel="noreferrer">
+            Read the published research <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
       </div>
     </section>
   );

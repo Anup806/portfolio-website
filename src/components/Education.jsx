@@ -1,7 +1,7 @@
 function Education() {
   return (
     <section className="section" id="education">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">Education</h2>
 
         <div className="timeline">

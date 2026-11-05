@@ -30,7 +30,7 @@ function Contact() {
 
   return (
     <section className="section" id="contact">
-      <div className="container reveal">
+      <div className="container">
         <h2 className="section-title">Contact</h2>
 
         <div className="contact-grid">
@@ -43,9 +43,11 @@ function Contact() {
                   <input
                     type="text"
                     name="name"
+                    autoComplete="name"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
+                    required
                   />
                 </label>
                 <label>
@@ -53,9 +55,11 @@ function Contact() {
                   <input
                     type="email"
                     name="email"
+                    autoComplete="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
+                    required
                   />
                 </label>
               </div>
@@ -79,12 +83,14 @@ function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message"
+                  required
                 />
               </label>
 
               <button type="submit" className="contact-submit">
                 Send Message
               </button>
+              <p className="form-note">This opens a prefilled email draft in Gmail.</p>
             </form>
           </article>
 
@@ -99,10 +105,6 @@ function Contact() {
               <div>
                 <span>Location</span>
                 <p>Bhaktapur, Nepal</p>
-              </div>
-              <div>
-                <span>Phone</span>
-                <p>+977 98XXXXXXXX</p>
               </div>
             </div>
 
