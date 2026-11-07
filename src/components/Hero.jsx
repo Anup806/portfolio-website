@@ -25,8 +25,8 @@ function Hero() {
             <a className="btn-outline" href="#contact">Get in touch</a>
           </div>
           <div className="hero-meta" aria-label="Location and background">
-            <span>Bhaktapur, Nepal</span>
-            <span>Electronics &amp; Communication Engineering</span>
+            <span>Kathmandu, Nepal</span>
+            <span>Electronics &amp; Communication Engineer</span>
           </div>
         </div>
 
