@@ -29,14 +29,12 @@ const projects = [
     ],
     links: [
       {
-        className: "youtube-btn",
         href: "https://youtu.be/_uKX9vYBv1w",
         label: "Watch Grounded RAG Assistant demo video",
         title: "Watch demo video",
         icon: youtubeIcon,
       },
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/grounded-rag-assistant",
         label: "Open Grounded RAG Assistant with Two REST APIs repository",
         title: "GitHub repository",
@@ -46,7 +44,6 @@ const projects = [
   },
   {
     title: "Document Query Engine",
-    accent: "cyan",
     tech: ["Python", "FastAPI", "LlamaIndex", "Docker"],
     points: [
       "RAG-based document Q&A with voice chat support",
@@ -55,14 +52,12 @@ const projects = [
     ],
     links: [
       {
-        className: "youtube-btn",
         href: "https://youtu.be/QCVw8kZ5SOw",
         label: "Watch Document Query Engine demo video",
         title: "Watch demo video",
         icon: youtubeIcon,
       },
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/Document-Query-Engine",
         label: "Open Document Query Engine repository",
         title: "GitHub repository",
@@ -80,14 +75,12 @@ const projects = [
     ],
     links: [
       {
-        className: "youtube-btn",
         href: "https://youtu.be/95QFCS6z438",
         label: "Watch Local Letter RAG demo video",
         title: "Watch demo video",
         icon: youtubeIcon,
       },
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/local-letter-RAG",
         label: "Open Local Letter RAG repository",
         title: "GitHub repository",
@@ -97,7 +90,6 @@ const projects = [
   },
   {
     title: "Padel Game Analytics",
-    accent: "cyan",
     tech: ["Python", "YOLOv8", "OpenCV", "Pandas"],
     points: [
       "Shot classification system (forehand, backhand, serve, smash)",
@@ -106,7 +98,6 @@ const projects = [
     ],
     links: [
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/padel-analytics",
         label: "Open Padel Game Analytics repository",
         title: "GitHub repository",
@@ -125,14 +116,12 @@ const projects = [
     ],
     links: [
       {
-        className: "demo-btn",
         href: "https://ai-outreach-assistant--raianup806.replit.app/",
         label: "Open AI-Powered Job Outreach Automation Tool live demo",
         title: "Live demo",
         icon: demoIcon,
       },
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/AI-Outreach-Assistant",
         label: "Open AI-Outreach-Assistant repository",
         title: "GitHub repository",
@@ -144,7 +133,6 @@ const projects = [
 
   {
     title: "Adaptive Mixed-Reality Math Tutor",
-    accent: "cyan",
     badge: "Final Year Project",
     tech: ["Python", "OpenCV", "MediaPipe", "scikit-learn"],
     points: [
@@ -154,7 +142,6 @@ const projects = [
     ],
     links: [
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/Inclusive-Mixed-Reality-Math-Experience-design-Using-ML-Based-Models",
         label: "Open Adaptive Mixed-Reality Math Tutor repository",
         title: "GitHub repository",
@@ -171,7 +158,6 @@ const projects = [
     ],
     links: [
       {
-        className: "github-btn",
         href: "https://github.com/Anup806/Mediapipe-Cube-Moving-using-Hand-Gesture",
         label: "Open Gesture-Controlled 3D Interaction Engine repository",
         title: "GitHub repository",
@@ -191,7 +177,7 @@ function Projects() {
         <div className="projects-grid">
           {projects.map((project) => (
             <article
-              className={`glass-card project-card ${project.accent || ""}`}
+              className="glass-card project-card"
               key={project.title}
             >
               {project.badge ? <span className="badge final-badge">{project.badge}</span> : null}
@@ -214,7 +200,7 @@ function Projects() {
               <div className="project-actions">
                 {project.links.map((link) => (
                   <a
-                    className={`project-link ${link.className}`}
+                    className="project-link"
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"

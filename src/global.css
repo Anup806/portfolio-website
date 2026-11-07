@@ -156,8 +156,7 @@ textarea:focus-visible {
   padding: 5px 10px;
 }
 
-.glass-card,
-.content-card {
+.glass-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -168,9 +167,22 @@ textarea:focus-visible {
   z-index: 1300;
   top: 0;
   left: 0;
+  width: 100%;
   height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
   background: var(--accent);
   pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
 }
 
 .skip-link {
@@ -269,20 +281,6 @@ textarea:focus-visible {
   gap: 10px;
 }
 
-.nav-cta {
-  min-height: 40px;
-  padding: 9px 14px;
-  border-radius: var(--radius-sm);
-  background: var(--ink);
-  color: var(--surface);
-  font-size: 0.86rem;
-  font-weight: 500;
-}
-
-.nav-cta:hover {
-  background: var(--accent);
-}
-
 .menu-btn {
   display: none;
   width: 42px;
@@ -342,18 +340,28 @@ textarea:focus-visible {
   max-width: 690px;
 }
 
-.hero-eyebrow,
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 9px;
+.hero-eyebrow {
+  display: block;
+  min-height: 1.4em;
   margin: 0 0 20px;
-  color: var(--accent-dark);
+  color: var(--ink-soft);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.4;
+}
+
+.hero-caret {
+  margin-left: 0.08em;
+  color: var(--accent);
+  animation: hero-caret-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hero-caret-blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 .hero h1 {
@@ -519,52 +527,56 @@ textarea:focus-visible {
   letter-spacing: -0.02em;
 }
 
-.skills-icon-grid {
+.skills-groups {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
 }
 
-.skill-icon-card {
+.skills-group {
+  display: grid;
+  grid-template-columns: minmax(130px, 150px) minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills-group:first-child {
+  padding-top: 0;
+}
+
+.skills-group:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.skills-group h3 {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.skills-group ul {
   display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-chip {
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-}
-
-.skill-icon-card h3 {
-  min-width: 0;
-  color: var(--ink-soft);
-  font-size: 0.79rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.skill-logo {
-  display: inline-flex;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 30px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--surface-muted) 62%, var(--surface));
-}
-
-.skill-logo img {
-  display: block;
-  width: 21px !important;
-  height: 21px !important;
-  object-fit: contain;
-}
-
-.skill-logo.github img {
-  filter: invert(0.12);
+  background: var(--surface);
+  color: var(--ink-soft);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 /* Project portfolio */
@@ -908,6 +920,12 @@ textarea:focus-visible {
   font-size: 0.79rem;
 }
 
+.form-note a {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .contact-info-list {
   display: grid;
   gap: 17px;
@@ -1095,8 +1113,7 @@ textarea:focus-visible {
     --container: min(760px, calc(100% - 40px));
   }
 
-  .nav-links,
-  .nav-cta {
+  .nav-links {
     display: none;
   }
 
@@ -1129,10 +1146,6 @@ textarea:focus-visible {
 
   .about-photo-frame {
     width: 220px;
-  }
-
-  .skills-icon-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .contact-grid {
@@ -1195,13 +1208,14 @@ textarea:focus-visible {
     padding: 17px;
   }
 
-  .skills-icon-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+  .hero-eyebrow {
+    min-height: 2.8em;
   }
 
-  .skill-icon-card {
-    padding: 8px;
+  .skills-group {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 12px 0;
   }
 
   .projects-grid,

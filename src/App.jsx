@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,28 +11,46 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const scrollProgressRef = useRef(null);
+  const backToTopVisibleRef = useRef(false);
 
   useEffect(() => {
+    let frameId = 0;
+
     const onScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-      setScrollProgress(progress);
-      setShowBackToTop(scrollTop > 300);
+      if (frameId) return;
+
+      frameId = window.requestAnimationFrame(() => {
+        frameId = 0;
+        const scrollTop = window.scrollY;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+        if (scrollProgressRef.current) {
+          scrollProgressRef.current.style.transform = `scaleX(${progress})`;
+        }
+
+        const shouldShowBackToTop = scrollTop > 300;
+        if (backToTopVisibleRef.current !== shouldShowBackToTop) {
+          backToTopVisibleRef.current = shouldShowBackToTop;
+          setShowBackToTop(shouldShowBackToTop);
+        }
+      });
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frameId) window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} aria-hidden="true" />
+      <div ref={scrollProgressRef} className="scroll-progress" aria-hidden="true" />
 
       <Navbar />
 

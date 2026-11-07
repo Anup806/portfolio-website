@@ -9,13 +9,13 @@ function About() {
         <div className="about-text">
           <h2 className="section-title">About Me</h2>
           <p>
-            I’m an Electronics and Communication Engineering graduate focused on building practical AI/ML systems through research and hands-on projects.
+            I’m an Electronics and Communication Engineering graduate (B.E., Pokhara University, 2026) building practical AI systems: retrieval-augmented generation pipelines, LLM-powered tools, and computer vision projects.
           </p>
           <p>
-            My research in Deep Knowledge Tracing received the IEEE ICTP 2026 Best Paper Award in the AI &amp; ML Track.
+            I co-authored research on Deep Knowledge Tracing for an adaptive augmented reality learning system for autistic children. We deployed it in real classrooms with Autism Care Nepal Society, reaching 0.84 accuracy and 0.82 PR-AUC, and the paper received the Best Paper Award in the AI &amp; ML Track at IEEE ICTP 2026.
           </p>
           <p>
-            I work with Python, data science tools, LLM integrations, and Retrieval-Augmented Generation (RAG) pipelines.
+            On the engineering side, I build RAG systems end to end: FastAPI backends, vector search with Qdrant and ChromaDB, source citations on grounded answers, and deployments that run on cloud APIs (Groq) or fully offline (Ollama). I try to measure what I build, for example 5.55 s average end-to-end latency and 87% keyword-match accuracy on a 15-query test set for my voice-enabled RAG variant, and I fix failure modes such as multi-turn hallucination at the root instead of patching around them.
           </p>
 
           <Skills />

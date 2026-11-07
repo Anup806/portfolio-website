@@ -1,9 +1,21 @@
+import useTypewriter from "../hooks/useTypewriter";
+
 function Hero() {
+  const { currentText, reducedMotion } = useTypewriter();
+
   return (
     <section className="hero" id="hero" aria-labelledby="hero-title">
       <div className="hero-content">
         <div className="hero-copy">
-          <p className="hero-eyebrow">AI/ML engineer · LLM applications · Research</p>
+          <p className="hero-eyebrow">
+            <span className="visually-hidden">
+              AI/ML engineer, IEEE ICTP 2026 Best Paper Awardee, Electronics and Communication Engineering graduate, Deep Knowledge Tracing researcher
+            </span>
+            <span className="hero-eyebrow-visual" aria-hidden="true">
+              {currentText}
+              {!reducedMotion ? <span className="hero-caret">|</span> : null}
+            </span>
+          </p>
           <h1 id="hero-title">Building practical <span>AI systems.</span></h1>
           <p className="hero-summary">
             I’m Anup Rai, an Electronics and Communication Engineering graduate focused on applied machine learning, retrieval-augmented generation, and adaptive learning experiences.

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   { id: "about", label: "About" },
@@ -14,22 +14,14 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const scrolledRef = useRef(false);
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 80);
-
-      const sectionOffsets = links
-        .map((link) => {
-          const el = document.getElementById(link.id);
-          if (!el) return null;
-          return { id: link.id, top: el.getBoundingClientRect().top };
-        })
-        .filter(Boolean);
-
-      const current = sectionOffsets.filter((section) => section.top <= 180).at(-1);
-      if (current) {
-        setActive(current.id);
+      const isScrolled = window.scrollY > 80;
+      if (scrolledRef.current !== isScrolled) {
+        scrolledRef.current = isScrolled;
+        setScrolled(isScrolled);
       }
     };
 
@@ -37,6 +29,26 @@ function Navbar() {
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const currentSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (currentSection) setActive(currentSection.target.id);
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+
+    links.forEach(({ id }) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {

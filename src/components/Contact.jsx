@@ -92,6 +92,9 @@ function Contact() {
               </button>
               <p className="form-note">This opens a prefilled email draft in Gmail.</p>
             </form>
+            <p className="form-note">
+              Prefer email? <a href="mailto:raianup806@gmail.com">raianup806@gmail.com</a>
+            </p>
           </article>
 
           <article className="glass-card contact-card contact-info-card">
